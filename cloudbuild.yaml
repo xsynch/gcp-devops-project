@@ -6,10 +6,10 @@ steps:
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
-  - filename=gke.yaml
-  - image=gcr.io/$PROJECT_ID/gcpdevops:latest
-  - locaion=us-central1-c
-  - cluster=cluster-1
-  - namespace=gcp-devops-prod
+  - --filename=gke.yaml
+  - --image=gcr.io/$PROJECT_ID/gcpdevops
+  - --locaion=us-central1-c
+  - --cluster=cluster-1
+  - --namespace=gcp-devops-prod
 options:
   logging: CLOUD_LOGGING_ONLY
